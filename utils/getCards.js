@@ -1,9 +1,8 @@
-const request = require('request')
 const fetch = require('node-fetch')
 const { token, api_key } = require('./api.js')
 
 
-const getCards = async (callback) => {
+const getCards = (callback) => {
     let url = "https://api.trello.com/1/members/me/boards?fields=name,url&key=" + api_key + "&token=" + token
     var lists = [];
     fetch(url)
