@@ -7,7 +7,7 @@ const app = express();
 const port = 5000;
 
 app.get('/api/getToDo', (req, res) => {
-    toDo((error, lists = {}) => {
+    toDo((error, lists) => {
         console.log(lists);
     });
     res.json([{
