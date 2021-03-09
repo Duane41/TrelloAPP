@@ -1,11 +1,15 @@
 const express = require('express')
 
+const toDo = require("./utils/getCards");
+
 const app = express();
 
 const port = 5000;
 
 app.get('/api/getToDo', (req, res) => {
-    console.log("In")
+    toDo((error, lists = {}) => {
+        console.log(lists);
+    });
     res.json([{
         id: 1,
         description: "Wash"
