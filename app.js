@@ -8,12 +8,8 @@ const port = 5000;
 
 app.get('/api/getToDo', (req, res) => {
     toDo((error, lists) => {
-        console.log(lists);
+        res.json(lists)
     });
-    res.json([{
-        id: 1,
-        description: "Wash"
-    }])
 });
 
 app.listen(port, () => {
