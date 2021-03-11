@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@blueprintjs/core": "^3.41.0",
     "concurrently": "^6.0.0",
     "express": "^4.17.1",
     "fetch": "^1.1.0",

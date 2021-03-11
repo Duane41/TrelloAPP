@@ -15,8 +15,8 @@ app.get('/api/getToDo', (req, res) => {
 
 app.get('/api/createCard', (req, res) => {
     let { name, list_id } = req.query
-    createCard((error, lists) => {
-        res.json(lists)
+    createCard(name, list_id, (error, response) => {
+        res.json(response)
     });
 });
 

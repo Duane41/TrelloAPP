@@ -3,9 +3,13 @@ const { token, api_key } = require('./api.js')
 
 
 const createCard = (name, list_id, callback) => {
-    let url = "https://api.trello.com/1/cards?key=" + api_key + "&token=" + token + "&name" + name + "&idList" + list_id
+    let url = "https://api.trello.com/1/cards?key=" + api_key + "&token=" + token + "&name=" + name + "&idList=" + list_id
+    
+    const requestOptions = {
+        method: 'POST'
+    };
 
-    fetch(url)
+    fetch(url, requestOptions)
         .then(res => res.json())
         .then(result => {
             if (result.idList == list_id) {
